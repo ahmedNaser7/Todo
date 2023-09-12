@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zerobranch.layout.SwipeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:draggedItem="@id/card"
+    app:leftItem="@id/delete_view"
+    app:swipeDirection="right"
+    >
+
+
+    <ImageView
+        android:id="@+id/delete_view"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="24dp"
+        android:src="@drawable/ic_delete"
+        android:background="@drawable/delete_item_background"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="14dp"
+        android:padding="12dp"
+        app:cardCornerRadius="14dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            app:cardCornerRadius="20dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Task Title"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/LightPrimary"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                tools:text="Task Title"
+                android:textSize="14sp"
+                android:textColor="@color/LightPrimary"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                android:lines="2"
+                android:minLines="2"
+                android:maxLines="2"
+                />
+
+
+            <ImageView
+                android:id="@+id/done_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:paddingHorizontal="20dp"
+                android:src="@drawable/ic_done"
+                android:background="@color/LightPrimary"                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</com.zerobranch.layout.SwipeLayout>

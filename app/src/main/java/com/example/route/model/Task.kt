@@ -17,4 +17,5 @@ data class Task(
     var dataTime:Long?=null,
     @ColumnInfo
     var isDone:Boolean?=null
+//imp
 ):Serializable
