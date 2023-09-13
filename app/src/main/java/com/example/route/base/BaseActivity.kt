@@ -40,8 +40,8 @@ class BaseActivity:AppCompatActivity() {
         }
 
         if(negActionTitle!=null){
-            messageDialogBuilder.setNegativeButton(negActionTitle,posAction?:DialogInterface
-                .OnClickListener { dialog, which ->  dialog.dismiss()})
+            messageDialogBuilder.setNegativeButton(negActionTitle, negAction ?: DialogInterface
+                .OnClickListener { dialog, which -> dialog.dismiss() })
         }
 
         messageDialogBuilder.setCancelable(cancelable)
