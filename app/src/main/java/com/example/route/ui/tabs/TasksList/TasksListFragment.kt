@@ -40,10 +40,11 @@ lateinit var viewBinding: FragmentTasksListBinding
 
     fun loadTasks() {
          context?.let {
-             val tasks =  MyDataBase.getInstance(it)
+             val tasks = MyDataBase.getInstance(it)
                  .userDao()
-                 .getAllTasks()
-            adapter.bindTasks(tasks.toMutableList())
+                 .getTasksByDate(selectedDate.timeInMillis)
+
+             adapter.bindTasks(tasks.toMutableList())
          }
 
     }
@@ -59,43 +60,38 @@ lateinit var viewBinding: FragmentTasksListBinding
     }
 
     private fun initView() {
-        viewBinding.recycler.adapter= adapter
-        adapter.onItemDeleteListener= TasksAdapter.OnItemClickListener { position, task ->
+        viewBinding.recycler.adapter = adapter
+        adapter.onItemDeleteListener = TasksAdapter.OnItemClickListener { position, task ->
             deleteTaskFromDatabase(task)
             adapter.taskDeleted(task)
         }
 
-        adapter.onCardClickedListener=object :TasksAdapter.OnItemClickedListener{
-            override fun onItemClicked(task: Task) {
-
+        adapter.onCardClickedListener =
+            TasksAdapter.OnItemClickedListener { task ->
                 showMessage("what do you want",
-                           "update",
-                    {
-                    _, dialog -> updateTodoTask(task)
-                    },  "Make done",{
-                        _, dialog ->makeDone(task)
+                    "update",
+                    { _, dialog ->
+                        updateTodoTask(task)
+                    }, "Make done", { _, dialog ->
+                        makeDone(task)
                     }
-                    )
-
+                )
             }
-
-        }
 
         viewBinding.calendarView.setSelectedDate(
             CalendarDay.today()
         )
-        viewBinding.calendarView.setOnDateChangedListener(OnDateSelectedListener {
-                widget, date, selected ->
+        viewBinding.calendarView.setOnDateChangedListener { widget, date, selected ->
 
-            if(selected){
+            if (selected) {
                 //reload tasks in the selected date
-                selectedDate.set(Calendar.YEAR,date.year)
-                selectedDate.set(Calendar.MONTH,date.month-1)
-                selectedDate.set(Calendar.DAY_OF_MONTH,date.day)
+                selectedDate.set(Calendar.YEAR, date.year)
+                selectedDate.set(Calendar.MONTH, date.month - 1)
+                selectedDate.set(Calendar.DAY_OF_MONTH, date.day)
                 loadTasks()
             }
 
-        })
+        }
 
 
     }
