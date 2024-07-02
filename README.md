@@ -2,41 +2,28 @@
 
 ## Screenshots
 
-<img src="screenshots/screenshots.png" alt="Screenshot">
+<img src="Screenshots.png" alt="Screenshot">
 
-## Why a to-do app?
+## Islami Application?
 
-The app in this project aims to be simple enough that you can understand it quickly, but complex enough to showcase difficult design decisions and testing scenarios. For more information, see the [app's specification](https://github.com/googlesamples/android-architecture/wiki/To-do-app-specification).
+Welcome to the Islami Kotlin Application! This application is designed to provide a comprehensive and user-friendly experience for accessing various Islamic resources including the Quran, Hadith, Sebha, and Athkar.
 
-## What is it not?
-*   A template. Check out the [Architecture Templates](https://github.com/android/architecture-templates) instead.
-*   A UI/Material Design sample. The interface of the app is deliberately kept simple to focus on architecture. Check out the [Compose Samples](https://github.com/android/compose-samples) instead.
-*   A complete Jetpack sample covering all libraries. Check out [Android Sunflower](https://github.com/googlesamples/android-sunflower) or the advanced [GitHub Browser Sample](https://github.com/googlesamples/android-architecture-components/tree/master/GithubBrowserSample) instead.
-*   A real production app with network access, user authentication, etc. Check out the [Now in Android app](https://github.com/android/nowinandroid) instead.
 
-## Who is it for?
+## Features
+*   Quran: Access the complete text of the Quran .
+*   Hadith: Browse and search through collections of Hadith.
+*   Sebha: A digital counter for your athikr.
+*   Athkar: Daily Athkar for Morning and Night.
 
-*   Intermediate developers and beginners looking for a way to structure their app in a testable and maintainable way.
-*   Advanced developers looking for quick reference.
 
 ## Opening a sample in Android Studio
-
-To open one of the samples in Android Studio, begin by checking out one of the sample branches, and then open the root directory in Android Studio. The following series of steps illustrate how to open the [usecases](tree/usecases/) sample.
 
 Clone the repository:
 
 ```
-git clone git@github.com:android/architecture-samples.git
-```
-This step checks out the master branch. If you want to change to a different sample: 
-
-```
-git checkout usecases
+https://github.com/ahmedNaser7/Muslim.git
 ```
 
-**Note:** To review a different sample, replace `usecases` with the name of sample you want to check out.
-
-Finally open the `architecture-samples/` directory in Android Studio.
 
 ### License
 
@@ -51,3 +38,4 @@ file to you under the Apache License, Version 2.0 (the "License"); you may not
 use this file except in compliance with the License.
 
 ```
+
