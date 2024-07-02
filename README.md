@@ -4,16 +4,17 @@
 
 <img src="Screenshots.png" alt="Screenshot">
 
-## Islami Application?
+## Overview
 
-Welcome to the Islami Kotlin Application! This application is designed to provide a comprehensive and user-friendly experience for accessing various Islamic resources including the Quran, Hadith, Sebha, and Athkar.
+The Todo Application is a simple and intuitive task management tool that allows users to create, manage, and delete tasks efficiently.
+This application is designed to help you keep track of your tasks and manage your time effectively.
 
 
 ## Features
-*   Quran: Access the complete text of the Quran .
-*   Hadith: Browse and search through collections of Hadith.
-*   Sebha: A digital counter for your athikr.
-*   Athkar: Daily Athkar for Morning and Night.
+*   Homepage with Todo List: The main page of the application displays all your tasks in a list format.
+*   Task: Easily add and delete new tasks with just a few clicks.
+*   Time Management: Add and manage the time associated with each task to keep track of deadlines and schedules.
+*   User-friendly Interface: Simple and clean design for a seamless user experience.
 
 
 ## Opening a sample in Android Studio
@@ -21,7 +22,7 @@ Welcome to the Islami Kotlin Application! This application is designed to provid
 Clone the repository:
 
 ```
-https://github.com/ahmedNaser7/Muslim.git
+https://github.com/ahmedNaser7/Todo.git
 ```
 
 
