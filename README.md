@@ -2,7 +2,7 @@
 
 ## Screenshots
 
-<img src="Screenshots.png" alt="Screenshot">
+<img src="screenshot.png" alt="Screenshot">
 
 ## Overview
 
